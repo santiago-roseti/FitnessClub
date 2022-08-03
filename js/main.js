@@ -27,6 +27,7 @@ function agregarAlCarrito (id, name, price) {
 //Creación de un array vacío
 const productos = [];
 
+
 //Llamado a la función para crear el nuevo objeto "agregarAlCarrito"
 const cuota1 = new agregarAlCarrito (1, "Suscripción básica", 2000); 
 const cuota2 = new agregarAlCarrito (2, "Suscripción fitness", 2500);
@@ -93,4 +94,10 @@ for(let nuevosProductos of indumentaria) {
     ropa.innerHTML = `<h3>${nuevosProductos.name}</h3>
     <p>${nuevosProductos.price}</p>`;
     listaVacia.appendChild(ropa);
-}
+};
+
+document.querySelector("#carrito")
+productos.addEventListener("click", agregar);
+function agregar(){
+    console.log("Agregaste" + productos + "correctamente")
+};
