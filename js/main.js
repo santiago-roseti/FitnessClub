@@ -1,3 +1,7 @@
+//llamado a la class titulo-carrito del HTML con querySelector y texto modificado con DOM con la funcion de innerHTML
+const encabezado = document.querySelector(".titulo-carrito").innerHTML = "Mirá nuestras mensualidades y catálogo!";
+console.log(encabezado);
+const totalDelCarrito = document.getElementById("total-carrito");
 
 let nombreCompleto = prompt ("Registrate con tu nombre y apellido.");
 console.log ("¡Bienvendo a Fitness Club, " + nombreCompleto + "!");
@@ -91,68 +95,66 @@ const productos = [
     price:2000
 }];
 console.log(productos);
-
-productos.forEach((producto)=> {
-    const idButton = `add-cart${producto.id}`
-    document.querySelector("#seccion-card").innerHTML += `<div class="card d-flex col mb-5">
-    <img src="${producto.image}">
-    <h5>${producto.title}</h5>
-    <p>${producto.price}</p>
-    <button class="btn btn-outline-dark mt-auto" id=${idButton}>Agregar al carrito</button>
-    </div>`
-})
-productos.forEach((producto) => {
-    const idButton = `add-cart${producto.id}`
-    document.getElementById(idButton).addEventListener("click", () => {
-    alert("agregaste un producto al carrito");
-    productos.push(producto);
-    document.getElementById("total-carrito").innerHTML = carritoDeCompras.length;
-    console.log(carritoDeCompras);
-    
-    })
-})
-//determinar stock
-if(productos >= 1){
-    console.log("El producto ha sido agregado correctamente al carrito.")
+/* const renderCarrito = (carrito) => {
+	// Se renderiza el carrito cuando
+	const html = productos.map((producto) => {
+		return `Estilo de la lista que quieras para el popup del carrito`
+	})
+	SELECTORCONDOM.innerHTML = html 
 }
-else(productos < 1);{
-    console.log("No disponemos de stock en este momento, lo sentimos.")
-};
-//totalidad del carrito con storage
-localStorage.setItem("totalCarrito", carritoDeCompras.lenght);
-const totalCarrito = localStorage.getItem("totalCarrito");
+ */
+const agregarAlCarrito = (producto) => {
+	productos.push(producto)
+	localStorage.setItem("carritoDeCompras", JSON.stringify(productos))
+	totalDelCarrito.innerHTML = carritoDeCompras.length
+	/* renderCarrito(carritoDeCompras) */
+}
 
+//Determino stock
+const determinarStock = (producto) => {
+	if (producto.stock > 0) {
+		Swal.fire(
+            'Felicitaciones!',
+            'Agregaste el producto correctamente al carrito',
+            'OK'
+          )
+	} else {
+		agregarAlCarrito(producto)
+	}
+}
 //Creo un function para simular la opcion de eliminar un producto del carrito
- function eliminarDelCarrito (idDelProducto){
-const index= productos.findIndex((borrar) => borrar.id === idDelProducto);
-if (index !== -1){
-    productos.splice(index, 1);
-}
-console.log(index);
-}
+function eliminarDelCarrito(idDelProducto) {
+    const index = productos.findIndex((borrar) => borrar.id === idDelProducto)
+    if (index !== -1) {
+        productos.splice(index, 1)
+        localStorage.setItem("carritoDeCompras", JSON.stringify(productos))
+        } console.log(index)
+    }
+    productos.forEach((producto)=> {
+        const idButton = `add-cart${producto.id}`
+        document.querySelector("#seccion-card").innerHTML += `<div class="card d-flex col mb-5">
+        <img src="${producto.image}">
+        <h5>${producto.title}</h5>
+        <p>${producto.price}</p>
+        <button class="btn btn-outline-dark mt-auto" id=${idButton}>Agregar al carrito</button>
+        </div>`
+    })
+    productos.forEach((producto) => {
+        const idButton = `add-cart${producto.id}`
+        document.getElementById(idButton).addEventListener("click", () => {
+            determinarStock(producto)
+            Swal.fire(
+                'Felicitaciones!',
+                'Agregaste el producto correctamente al carrito',
+                'OK'
+              );
+        productos.push(producto);
+        document.getElementById("total-carrito").innerHTML = carritoDeCompras.length;
+        })
+    })
+    
 //DOM
 let barraNav = document.querySelectorAll(".nav-link");
 console.log(barraNav);
-
 let carrito = document.querySelector(".carritoDeCompras");
 console.log(carrito);
-
-//llamado a la class titulo-carrito del HTML con querySelector y texto modificado con DOM con la funcion de innerHTML
-let encabezado = document.querySelector(".titulo-carrito").innerHTML = "Mirá nuestras mensualidades y catálogo!";
-console.log(encabezado);
-
-let listaVacia = document.querySelector("#listaVacia");
-
-let indumentaria = [
-    {id: 1, name:"Musculosa Adidas", price:"$3000"},
-    {id: 2, name:"Zapatillas Nike", price:"$12000"},
-    {id: 3, name:"Camiseta Racing Club", price:"$10500"}
-];
-
-for(let nuevosProductos of indumentaria) {
-    let ropa = document.createElement("div");
-    ropa.innerHTML = `<h3>${nuevosProductos.name}</h3>
-    <p>${nuevosProductos.price}</p>`;
-    listaVacia.appendChild(ropa);
-};
-
