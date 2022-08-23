@@ -20,7 +20,7 @@ if (edadPersona >= 16){
 else (edadPersona < 16); {
     console.log("Sos muy chico, no podes tomar suplementos.");
 }
-const carritoDeCompras = [];
+const carritoDeCompras = JSON.parse(localStorage.getItem("carrito")) || [];
 const productos = [
 {
     id:1, 
@@ -135,21 +135,24 @@ function eliminarDelCarrito(idDelProducto) {
         document.querySelector("#seccion-card").innerHTML += `<div class="card d-flex col mb-5">
         <img src="${producto.image}">
         <h5>${producto.title}</h5>
-        <p>${producto.price}</p>
+        <p>$${producto.price}</p>
         <button class="btn btn-outline-dark mt-auto" id=${idButton}>Agregar al carrito</button>
         </div>`
     })
     productos.forEach((producto) => {
         const idButton = `add-cart${producto.id}`
         document.getElementById(idButton).addEventListener("click", () => {
+            carritoDeCompras.push(producto);
+            const precioTotal = carritoDeCompras.reduce((acumulador, producto) => acumulador + producto.price, 0)
+            console.log(precioTotal);
+            document.getElementById("total-carrito").innerHTML = carritoDeCompras.length + `$ ${precioTotal}`;
             determinarStock(producto)
             Swal.fire(
                 'Felicitaciones!',
                 'Agregaste el producto correctamente al carrito',
-                'OK'
-              );
-        productos.push(producto);
-        document.getElementById("total-carrito").innerHTML = carritoDeCompras.length;
+                'success'
+            );
+        console.log(carritoDeCompras)
         })
     })
     
