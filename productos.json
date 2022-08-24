@@ -1,0 +1,74 @@
+[
+    {
+        "id":1, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":2, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":3, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":4, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":274, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":384, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":378, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":103, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":736, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":92, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":582, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    },
+    {
+        "id":17, 
+        "image":"./imagenes/cuota1.jpg",
+        "title":"Suscripción básica",
+        "price":2000
+    }
+]
