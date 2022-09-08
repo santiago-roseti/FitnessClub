@@ -3,72 +3,76 @@
         "id":1, 
         "image":"./imagenes/cuota1.jpg",
         "title":"Suscripción básica",
-        "price":2000
+        "description":"Mensualidad de musculación.",
+        "price":2500
     },
     {
         "id":2, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/cuota2.jpg",
+        "title":"Suscripción fitness",
+        "description":"Mensualidad de musculación + pote de 300gr. de Creatina SPX.",
+        "price":3500
     },
     {
         "id":3, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/cuota3.jpg",
+        "title":"Suscripción premium",
+        "description":"Mensualidad de musculación + coach personalizado.",
+        "price":4000
     },
     {
         "id":4, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/cuota4.jpg",
+        "title":"Suscripción golden",
+        "description":"Mensualidad de musculación + coach personalizado + pote de Whey Protein ENA.",
+        "price":4500
     },
     {
         "id":274, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/wheyProteinENA.jpg",
+        "title":"Whey Protein ENA",
+        "price":3700
     },
     {
         "id":384, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/BestProteinBPI.png",
+        "title":"Best Protein HPI Sports",
+        "price":4500
     },
     {
         "id":378, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/BestFruitCreatineSPX.png",
+        "title":"Creatina sabor frutilla SPX",
+        "price":2500
     },
     {
         "id":103, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/UltraTechCreatine.jpg",
+        "title":"Creatina Ultratech",
+        "price":3000
     },
     {
         "id":736, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/PreWorkoutGold.jpg",
+        "title":"Pre entreno Gold",
+        "price":2200
     },
     {
         "id":92, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
+        "image":"./imagenes/BCAA ON.jpg",
+        "title":"Omega 3 BCAA",
         "price":2000
     },
     {
         "id":582, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/UltraMassENA.webp",
+        "title":"Ganador de Peso",
+        "price":3200
     },
     {
         "id":17, 
-        "image":"./imagenes/cuota1.jpg",
-        "title":"Suscripción básica",
-        "price":2000
+        "image":"./imagenes/KetoWightLoss BPI Sports.webp",
+        "title":"Quemador de grasa HPI Sports",
+        "price":3000
     }
 ]

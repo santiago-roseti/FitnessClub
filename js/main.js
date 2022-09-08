@@ -44,9 +44,11 @@ fetch("productos.json")
     .then((productos) => {
         productos.forEach((producto)=> {
         const idButton = `add-cart${producto.id}`
+        document.getElementById("cards-modal").innerHTML += `<div class="modal-texto">`
         document.querySelector("#seccion-card").innerHTML += `<div class="card d-flex col mb-5">
         <img src="${producto.image}">
-        <h5>${producto.title}</h5>
+        <h4>${producto.title}</h4>
+        <h6>${producto.description}</h6>
         <p>$${producto.price}</p>
         <button class="btn btn-outline-dark mt-auto" id=${idButton}>Agregar al carrito</button>
         </div>`
